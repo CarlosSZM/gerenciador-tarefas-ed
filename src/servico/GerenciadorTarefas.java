@@ -47,7 +47,10 @@ public class GerenciadorTarefas {
     public boolean atribuirTarefa(int idTarefa, int idFuncionario) {
         Funcionario funcionario = funcionarios.buscar(idFuncionario);
         Tarefa tarefa = backlog.buscar(idTarefa);
-        if (funcionario == null || tarefa == null) {
+        Tarefa proximaTarefa = backlog.consultarInicio();
+        if (funcionario == null || tarefa == null || proximaTarefa == null
+                || proximaTarefa.getId() != idTarefa
+                || tarefa.getStatus() != StatusTarefa.PENDENTE) {
             return false;
         }
         tarefa.setResponsavelId(idFuncionario);
