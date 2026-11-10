@@ -127,7 +127,7 @@ public class Main {
         if (gerenciador.atribuirTarefa(idTarefa, idFuncionario)) {
             System.out.println("Tarefa atribuida.");
         } else {
-            System.out.println("Tarefa ou funcionario nao encontrado.");
+            System.out.println("Funcionario invalido ou tarefa indisponivel para atribuicao.");
         }
     }
 

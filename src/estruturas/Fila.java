@@ -22,6 +22,13 @@ public class Fila {
         return quantidade;
     }
 
+    public Tarefa consultarInicio() {
+        if (isVazia()) {
+            return null;
+        }
+        return inicio.tarefa;
+    }
+
     public void enfileirar(Tarefa tarefa) {
         NoTarefa novo = new NoTarefa(tarefa);
         if (isVazia()) {
