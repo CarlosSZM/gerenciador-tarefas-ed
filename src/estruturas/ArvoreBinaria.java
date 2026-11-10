@@ -103,13 +103,13 @@ public class ArvoreBinaria {
                 return atual.esq;
             }
 
-            NoArvore sucessor = atual.dir;
-            while (sucessor.esq != null) {
-                sucessor = sucessor.esq;
+            NoArvore antecessor = atual.esq;
+            while (antecessor.dir != null) {
+                antecessor = antecessor.dir;
             }
 
-            atual.funcionario = sucessor.funcionario;
-            atual.dir = removerNo(atual.dir, sucessor.funcionario.getId());
+            atual.funcionario = antecessor.funcionario;
+            atual.esq = removerNo(atual.esq, antecessor.funcionario.getId());
         }
 
         return atual;
