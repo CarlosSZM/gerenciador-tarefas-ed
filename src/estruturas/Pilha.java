@@ -21,20 +21,52 @@ public class Pilha {
     }
 
     public void push(Tarefa tarefa) {
+        if (tarefa == null) {
+            return;
+        }
+        NoTarefa novo = new NoTarefa(tarefa);
+        novo.proximo = topo;
+        topo = novo;
+        quantidade++;
     }
 
     public Tarefa pop() {
-        return null;
+        if (isVazia()) {
+            return null;
+        }
+        Tarefa tarefa = topo.tarefa;
+        topo = topo.proximo;
+        quantidade--;
+        return tarefa;
     }
 
     public Tarefa getTopo() {
-        return null;
+        if (isVazia()) {
+            return null;
+        }
+        return topo.tarefa;
     }
 
     public Tarefa buscar(int id) {
+        NoTarefa atual = topo;
+        while (atual != null) {
+            if (atual.tarefa.getId() == id) {
+                return atual.tarefa;
+            }
+            atual = atual.proximo;
+        }
         return null;
     }
 
     public void listar() {
+        if (isVazia()) {
+            System.out.println("Pilha vazia.");
+            return;
+        }
+        NoTarefa atual = topo;
+        while (atual != null) {
+            System.out.println(atual.tarefa);
+            atual = atual.proximo;
+        }
     }
 }
