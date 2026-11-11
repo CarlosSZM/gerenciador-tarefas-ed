@@ -11,6 +11,6 @@ class NoArvore {
     NoArvore(Funcionario funcionario) {
         this.funcionario = funcionario;
         this.esq = null;
-        this.dir = null;
+        this.dir = null
     }
 }
