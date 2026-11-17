@@ -8,8 +8,8 @@ public class Tarefa {
     private StatusTarefa status;
 
     public Tarefa(int id, String descricao) {
-        this.id = id;
         this.descricao = descricao;
+        this.id = id;
         this.responsavelId = 0;
         this.status = StatusTarefa.PENDENTE;
     }
