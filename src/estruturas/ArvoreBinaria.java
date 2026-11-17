@@ -11,7 +11,7 @@ public class ArvoreBinaria {
     }
 
     public boolean isVazia() {
-        return raiz == null;
+        return null == raiz;
     }
 
     public boolean inserir(Funcionario funcionario) {
