@@ -13,7 +13,7 @@ public class Pilha {
     }
 
     public boolean isVazia() {
-        return topo == null;
+        return null == topo;
     }
 
     public int getQuantidade() {
