@@ -6,7 +6,7 @@ Projeto da disciplina Estrutura de Dados 2026.2, desenvolvido em Java para organ
 
 - **Árvore binária de busca:** organiza funcionários pelo ID e permite inserir, localizar, remover e listar em in-ordem, pré-ordem e pós-ordem.
 - **Fila encadeada:** organiza o backlog pela ordem de chegada e permite adicionar, consultar, remover e listar tarefas.
-- **Pilha encadeada:** prevista para guardar tarefas excluídas e permitir desfazer a exclusão. A implementação da pilha ainda está em andamento.
+- **Pilha encadeada:** guarda tarefas excluídas e permite desfazer a exclusão.
 
 As estruturas são implementadas manualmente com nós. O projeto não usa coleções prontas do Java.
 
@@ -14,7 +14,7 @@ As estruturas são implementadas manualmente com nós. O projeto não usa coleç
 
 - Cadastrar, buscar, remover e listar funcionários.
 - Criar tarefas, atribuir ao funcionário a próxima tarefa da fila, concluir a próxima tarefa do backlog e remover tarefas.
-- Restaurar uma tarefa removida quando a implementação da pilha estiver concluída.
+- Restaurar a última tarefa removida do backlog.
 
 ## Como executar no Windows
 

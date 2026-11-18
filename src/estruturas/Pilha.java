@@ -13,7 +13,7 @@ public class Pilha {
     }
 
     public boolean isVazia() {
-        return null == topo;
+        return topo == null;
     }
 
     public int getQuantidade() {
@@ -22,7 +22,7 @@ public class Pilha {
 
     public void push(Tarefa tarefa) {
         NoTarefa novo = new NoTarefa(tarefa);
-        novo.setProximo(topo);
+        novo.proximo = topo;
         topo = novo;
         quantidade++;
     }
@@ -31,8 +31,8 @@ public class Pilha {
         if (isVazia()) {
             return null;
         }
-        Tarefa removida = topo.getTarefa();
-        topo = topo.getProximo();
+        Tarefa removida = topo.tarefa;
+        topo = topo.proximo;
         quantidade--;
         return removida;
     }
@@ -41,16 +41,16 @@ public class Pilha {
         if (isVazia()) {
             return null;
         }
-        return topo.getTarefa();
+        return topo.tarefa;
     }
 
     public Tarefa buscar(int id) {
         NoTarefa atual = topo;
         while (atual != null) {
-            if (atual.getTarefa().getId() == id) {
-                return atual.getTarefa();
+            if (atual.tarefa.getId() == id) {
+                return atual.tarefa;
             }
-            atual = atual.getProximo();
+            atual = atual.proximo;
         }
         return null;
     }
@@ -62,9 +62,8 @@ public class Pilha {
         }
         NoTarefa atual = topo;
         while (atual != null) {
-            System.out.println(atual.getTarefa());
-            atual = atual.getProximo();
+            System.out.println(atual.tarefa);
+            atual = atual.proximo;
         }
     }
-}
 }
