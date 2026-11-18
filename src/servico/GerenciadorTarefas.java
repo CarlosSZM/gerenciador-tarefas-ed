@@ -15,6 +15,9 @@ public class GerenciadorTarefas {
     private int proximoIdTarefa = 1;
 
     public boolean cadastrarFuncionario(int id, String nome, String cargo) {
+        if (id <= 0) {
+            return false;
+        }
         return funcionarios.inserir(new Funcionario(id, nome, cargo));
     }
 

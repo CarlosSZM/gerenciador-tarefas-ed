@@ -95,7 +95,7 @@ public class Main {
         if (gerenciador.cadastrarFuncionario(id, nome, cargo)) {
             System.out.println("Funcionario cadastrado.");
         } else {
-            System.out.println("Nao foi possivel cadastrar (ID ja existe).");
+            System.out.println("Nao foi possivel cadastrar (ID invalido ou ja existe).");
         }
     }
 
